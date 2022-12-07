@@ -6,9 +6,6 @@
  - Shahdeen Rahman (shahdeen.rahman@ucalgary.ca) (30141411)
  - Lujaina Eldelebshany (lujaina.eldelebshany@ucalgary.ca) (30140335)
 
-<b>modify this file to include any notes on how to use and run the program</b>
-<b>include any features you have added beyond the minimum requirements in a features list </b>
-
 ## Organization:
 - 'code' folder: contains your main python application code
 - 'database design' folder: contains EERD and relational data schema
