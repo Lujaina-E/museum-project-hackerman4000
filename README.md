@@ -12,6 +12,6 @@
 ## Organization:
 - 'code' folder: contains your main python application code
 - 'database design' folder: contains EERD and relational data schema
-- 'sql'
+- 'SQL Scripts' folder: contains database file and a sample querying file
 
 - optional data folder: has data files that you can sue to load data to your application if you use this optional implementation requirement
