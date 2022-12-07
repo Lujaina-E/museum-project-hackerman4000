@@ -170,3 +170,26 @@ VALUES
 ('99998','Chroma: Ancient Sculpture in Color'),
 ('56744','Lives of the Gods: Divinity in Maya Art'),
 ('56733','Lives of the Gods: Divinity in Maya Art');
+
+DROP ROLE IF EXISTS db_admin@localhost, db_employee@localhost, read_access@localhost;
+
+CREATE ROLE db_admin@localhost, db_employee@localhost, read_access@localhost;
+GRANT ALL PRIVILEGES ON ARTMUSEUM.* TO db_admin@localhost;
+GRANT SELECT, UPDATE, INSERT, DELETE ON ARTMUSEUM.* TO db_employee@localhost;
+GRANT Select ON ARTMUSEUM.* TO read_access@localhost;
+
+DROP USER IF EXISTS 'employee'@localhost;
+DROP USER IF EXISTS 'admin'@localhost;
+DROP USER IF EXISTS 'guest'@localhost;
+
+CREATE USER 'employee'@localhost IDENTIFIED WITH mysql_native_password BY 'password';
+CREATE USER 'admin'@localhost IDENTIFIED WITH mysql_native_password BY 'password';
+CREATE USER 'guest'@localhost;
+
+GRANT db_employee@localhost TO 'employee'@localhost;
+GRANT db_admin@localhost TO 'admin'@localhost;
+GRANT read_access@localhost TO 'guest'@localhost;
+
+SET DEFAULT ROLE ALL TO 'admin'@localhost;
+SET DEFAULT ROLE ALL TO 'guest'@localhost;
+SET DEFAULT ROLE ALL TO 'employee'@localhost;
