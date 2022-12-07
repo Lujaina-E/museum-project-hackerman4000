@@ -205,7 +205,7 @@ def employee():
             fd = open(file_name, 'r')
             sql_file = fd.read()
             fd.close()
-            sql_commands = sql_file.readlines()
+            sql_commands = sql_file.splitlines()
             for command in sql_commands:
                 cur.execute(command)
                 print(f'{command}   Row Inserted')
