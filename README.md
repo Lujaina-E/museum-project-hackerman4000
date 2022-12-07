@@ -12,3 +12,8 @@
 - 'SQL Scripts' folder: contains database file and a sample querying file
 
 - optional data folder: has data files that you can sue to load data to your application if you use this optional implementation requirement
+
+## Additional Info:
+- admin    -> Username: admin     Password: password
+- employee -> Username: employee  Password: password
+- guest    -> Username: guest
