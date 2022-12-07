@@ -1,4 +1,5 @@
 """ the password to all acounts except guest is 'password' """
+""" the usernames are: admin, employee or guest"""
 
 import mysql.connector
 
@@ -147,6 +148,7 @@ def employee():
     if choice == 1:
         condition_statement = ""
         sql = ""
+        attribute_choice = []
         table_choice = str(input('Please input a table you wish to lookup: ')).upper()
         num_attributes = input(f'Input the amount of attributes (input * for all). Maximum {len(table[table_choice])}: ')
         if(num_attributes == '*'):
@@ -154,9 +156,8 @@ def employee():
             num_attributes = 1
         else:
             num_attributes = int(num_attributes)
-        attribute_choice = []
-        for i in range(num_attributes):
-            attribute_choice.append(input("Please input the attribute you wish to SELECT from the table(enter '*' for the whole table): ").upper())
+            for i in range(num_attributes):
+                attribute_choice.append(input("Please input the attribute you wish to SELECT from the table: ").upper())
         num_condition = int(input('Please input the amount of conditions for the query: '))
         if num_condition > 0:
             condition_statement = input("Please input your condition exactly how it will be placed into the sql statement()(ex. IDNum = 29746): ").upper()
