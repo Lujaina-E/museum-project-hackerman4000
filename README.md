@@ -10,5 +10,8 @@
 <b>include any features you have added beyond the minimum requirements in a features list </b>
 
 ## Organization:
-- code folder: contains your main python application code
+- 'code' folder: contains your main python application code
+- 'database design' folder: contains EERD and relational data schema
+- 'sql'
+
 - optional data folder: has data files that you can sue to load data to your application if you use this optional implementation requirement
