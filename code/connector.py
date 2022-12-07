@@ -159,10 +159,10 @@ def employee():
             attribute_choice.append(input("Please input the attribute you wish to SELECT from the table(enter '*' for the whole table): ").upper())
         num_condition = int(input('Please input the amount of conditions for the query: '))
         if num_condition > 0:
-            condition_statement = input("Please input your condition exactly how it will be placed into the sql statement()(ex. CName = 'Canada'): ").upper()
+            condition_statement = input("Please input your condition exactly how it will be placed into the sql statement()(ex. IDNum = 29746): ").upper()
             for i in range(num_condition - 1):
                 connection = input('AND or OR: ').upper()
-                condition = input("Please input your condition exactly how it will be placed into the sql statement()(ex. CName = 'Canada'): ").upper()
+                condition = input("Please input your condition exactly how it will be placed into the sql statement()(ex. IDNum = 29746): ").upper()
                 condition_statement = f"{condition_statement} {connection} {condition}"
     
         distinct = input('Do you only want distinct values/combinations? (Y/N): ').upper()
