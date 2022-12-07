@@ -7,7 +7,7 @@
  - Lujaina Eldelebshany (lujaina.eldelebshany@ucalgary.ca) (30140335)
 
 ## Organization:
-- 'code' folder: contains your main python application code
+- 'code' folder: contains the main python application code
 - 'database design' folder: contains EERD and relational data schema
 - 'SQL Scripts' folder: contains database file and a sample querying file
 
